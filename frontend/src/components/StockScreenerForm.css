@@ -1,0 +1,222 @@
+/* StockScreenerForm.css */
+
+/* Basic reset for margin and padding */
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: "Arial", sans-serif; /* Change font for a more professional look */
+  background-color: #e9ecef; /* Soft background for contrast */
+}
+
+/* Main app container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height */
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #343a40; /* Dark navbar color */
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 24px; /* Increased font size for prominence */
+}
+
+/* Flex container for the form and results */
+.container {
+  display: flex;
+  flex: 1; /* Takes up the remaining space */
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Form sidebar styling */
+.form-container {
+  width: 350px; /* Slightly wider sidebar */
+  background: #ffffff; /* White background for the form */
+  padding: 30px;
+  /* border-radius: 10px; */
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  margin-right: 20px;
+}
+
+/* Result section styling */
+.result-container {
+  flex: 1; /* Takes up the remaining space */
+  background: #ffffff; /* White background for results */
+  padding: 30px;
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+
+  overflow-y: scroll;
+}
+
+/* Headings */
+h2 {
+  color: #495057; /* Darker color for headings */
+  margin-bottom: 20px;
+  font-size: 28px; /* Larger font size */
+  text-align: center; /* Centered for better presentation */
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007bff; /* Underline effect */
+  margin: 10px auto; /* Center the underline */
+}
+
+/* Input styles */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Added shadow transition */
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff; /* Highlight on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Added glow effect */
+  outline: none; /* Remove outline */
+}
+
+/* Button styling */
+button {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Full-width button */
+  margin-top: 10px; /* Space above the button */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Stock list styling */
+.result-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.result-container li {
+  padding: 15px;
+  background: #f8f9fa; /* Light gray background for list items */
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform */
+}
+
+.result-container li:hover {
+  background: #e9ecef; /* Slightly darker gray on hover */
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Image styling */
+.result-container img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* DatePicker styling */
+.react-datepicker-wrapper {
+  width: 100%; /* Ensures DatePicker spans the input field */
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 5px;
+}
+
+.react-datepicker {
+  font-family: "Arial", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+.react-datepicker__header {
+  background-color: #007bff; /* Header color */
+  color: white;
+  border-bottom: none;
+  padding: 10px 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.react-datepicker__day,
+.react-datepicker__day-name {
+  color: #333;
+  margin: 0.5rem;
+}
+
+.react-datepicker__day--selected {
+  background-color: #00bcd4; /* Selected day color */
+  color: white;
+  border-radius: 50%;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f0f0f0; /* Hover effect for days */
+  border-radius: 50%;
+}
+
+/* Loader styles */
+.loader {
+  border: 4px solid rgba(0, 123, 255, 0.2);
+  border-radius: 50%;
+  border-top: 4px solid #007bff; /* Primary color for the loader */
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto; /* Center the loader */
+}
+
+/* Animation for the loader */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.chartDiv {
+  margin-top: 25px;
+  background-color: white;
+}

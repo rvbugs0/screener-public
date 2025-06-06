@@ -1,0 +1,26 @@
+{
+  "intervals": [
+    "1m",
+    "2m",
+    "5m",
+    "15m",
+    "30m",
+    "60m",
+    "90m",
+    "1h",
+    "1d",
+    "5d",
+    "1wk",
+    "1mo",
+    "3mo"
+  ],
+  "scrips": {
+    "0": { "name": "All Forex Pairs", "file": "forex.csv" },
+    "1": { "name": "Nifty f&o Stocks", "file": "niftyfando.csv" },
+    "2": { "name": "Nifty 50 Stocks", "file": "nifty.csv" }
+  },
+
+  "strategies": {
+    "0": "Change of trend in last 5 bars"
+  }
+}
